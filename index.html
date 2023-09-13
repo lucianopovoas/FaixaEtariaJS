@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <form>
+        <label for="idade">Digite quantos anos você tem:</label>
+        <input type="number" id="idade" />
+        <button type="button" onclick="calcularFaixaEtaria()">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularFaixaEtaria() {
+
+            var idade = document.getElementById("idade").value;
+
+            var faixaEtaria = "";
+            if (idade >= 3 && idade <= 10) {
+                faixaEtaria = "3 a 10 anos";
+            } else if (idade >= 11 && idade <= 25) {
+                faixaEtaria = "11 a 25 anos";
+            } else if (idade >= 36 && idade <= 55) {
+                faixaEtaria = "36 a 55 anos";
+            } else if (idade >= 56 && idade <= 100) {
+                faixaEtaria = "56 a 100 anos";
+            } else {
+                faixaEtaria = "Idade Inexistente nas Faixas Etaria";
+            }
+
+            document.getElementById("resultado").textContent = "Faixa etária: " + faixaEtaria;
+        }
+    </script>
+</body>
+</html>
